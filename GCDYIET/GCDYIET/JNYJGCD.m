@@ -211,7 +211,7 @@ dispatch source可以取消，而dispatch queue不可以取消。
 	@autoreleasepool {
 
 		dispatch_queue_t gcd = dispatch_queue_create("这是并发队列", DISPATCH_QUEUE_CONCURRENT);
-//		dispatch_set_target_queue(<#dispatch_object_t object#>, <#dispatch_queue_t queue#>)
+//		dispatch_set_target_queue(dispatch_object_t object, dispatch_queue_t queue)
 		dispatch_async(gcd, ^{NSLog(@"b0");});
 		dispatch_async(gcd, ^{NSLog(@"b1");});
 		dispatch_async(gcd, ^{NSLog(@"b2");});
@@ -224,6 +224,17 @@ dispatch source可以取消，而dispatch queue不可以取消。
 		dispatch_async(gcd, ^{NSLog(@"b9");});
 		dispatch_async(gcd, ^{NSLog(@"b10");});
 	}
+
+//	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//		NSURL * url = [NSURL URLWithString:@"http://avatar.csdn.net/2/C/D/1_totogo2010.jpg"];
+//		NSData * data = [[NSData alloc]initWithContentsOfURL:url];
+//		UIImage *image = [[UIImage alloc]initWithData:data];
+//		if (data != nil) {
+//			dispatch_async(dispatch_get_main_queue(), ^{
+//				self.imageView.image = image;
+//			});
+//		}
+//	});
 }
 
 /*
