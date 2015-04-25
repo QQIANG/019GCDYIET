@@ -424,6 +424,7 @@
 				7CAD78F61A207229008BFFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CAD78F71A207229008BFFB5 /* Build configuration list for PBXNativeTarget "GCDYIETTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				7CAD78F91A207229008BFFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
